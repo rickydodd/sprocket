@@ -14,8 +14,11 @@ sprocket is an API for a learning management system.
 
 ## Installing and Building
 ### Requirements
-- x86-64 Linux to run commands from the Makefile, as the Makefile is currently specified
 - `make`
+- x86-64 Linux to execute the `sudo make setup` command*
+- `bash` to execute the `sudo make setup` command*
+
+\* If dependencies are setup without the use of `sudo make setup` for your operating system and shell combination, then commands `make tidy` and `make build` will be available, as long as your operating system and shell combination has installed and has access to `make`.
 
 ### Installing Dependencies
 When inside the project directory, the following will install Go version 1.22.0 to `/usr/local` and add the Go bin directory (`/usr/local/go/bin`) to the `.bashrc` file located at `$HOME/.bashrc`,
