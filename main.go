@@ -29,6 +29,13 @@ func main() {
 		Handler:      engine,
 	}
 
+	// Routing
+	engine.GET("/", func(ctx *gin.Context) {
+		ctx.JSON(http.StatusOK, gin.H{
+			"message": "Hello, world!",
+		})
+	})
+
 	// Listen and serve on a goroutine
 	go func() {
 		err := srv.ListenAndServe()
